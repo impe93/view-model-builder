@@ -1,4 +1,4 @@
-import { assignmentHelper, ViewModel } from "./util";
+import { ViewModel } from "./util";
 import { AllViewModelProps, viewModelBuilder } from "./viewModel.builder";
 @ViewModel()
 export class MyViewModel implements AllViewModelProps {
