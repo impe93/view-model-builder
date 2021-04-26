@@ -1,5 +1,5 @@
 import { ViewModel } from "./util";
-import { AllViewModelProps, viewModelBuilder } from "./viewModel.builder";
+import { AllViewModelProps } from "./viewModel.builder";
 @ViewModel()
 export class MyViewModel implements AllViewModelProps {
   isOverLimit: boolean = null;
