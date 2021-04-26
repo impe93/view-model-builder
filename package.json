@@ -2,7 +2,7 @@
   "name": "poc-schema",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Lorenzo Imperatrice <lorenzo.imperatrice@synesthesia.it>",
+  "author": "Lorenzo Imperatrice",
   "license": "MIT",
   "scripts": {
     "start": "tsc && node ./build/main.js"
