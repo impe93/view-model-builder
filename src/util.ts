@@ -12,3 +12,14 @@ export function assignmentHelper(target: any, source: any) {
     }
   })
 }
+
+export function ViewModel() {
+  return function _ViewModel<T extends {new(...args: any[]): {}}>(constr: T){
+    return class extends constr {
+      constructor(...args: any[]) {
+        super(...args);
+        assignmentHelper(this, args[0])
+      }
+    }
+  }
+}
