@@ -1,15 +1,5 @@
-
-// type ViewModelProps = {
-//   sum?: number;
-//   mean?: number;
-//   isOverLimit: boolean;
-// };
-
 import { Schema } from "./schema";
-
-type NewableViewModel<T> = {
-  new(schema: {[K in keyof T]: any}): any
-}
+import { NewableViewModel } from "./util";
 
 export interface AllViewModelProps {
   sum?: number,
@@ -18,14 +8,6 @@ export interface AllViewModelProps {
 }
 
 export function viewModelBuilder<T extends NewableViewModel<AllViewModelProps>>(ViewModel: T, schema: Schema): T {
-  const {
-    limiteSuperiore,
-    numero1,
-    numero2,
-    numero3,
-    sommaLimite
-  } = schema;
-
   const sum = getSum(schema);
   const mean = getMean(schema);
   const isOverLimit = getIsOverLimit(schema);
